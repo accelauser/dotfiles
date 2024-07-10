@@ -1,0 +1,5 @@
+configuration {
+    modi: [drun,window];        
+    
+}
+@theme "/home/accelauser/.config/rofi/themes/main.rasi"
