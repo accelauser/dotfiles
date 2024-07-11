@@ -9,7 +9,6 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-
 ### !!!MY CONFIGS!!!
 for_window [class="^.*"] border pixel 0
 exec --no-startup-id polybar
@@ -21,7 +20,7 @@ gaps outer 0px
 bindsym --release Print exec ~/.scripts/screenshot.sh
 bindsym $mod+Escape exec rofi -show powermenu -modi powermenu:~/.scripts/rofi-power-menu
 bindsym $mod+l exec . ~/.scripts/lock.sh 
-1exec_always --no-startup-id xss-lock --transfer-sleep-lock -- ~/.scripts/lock.sh
+exec_always --no-startup-id xss-lock --transfer-sleep-lock -- ~/.scripts/lock.sh
 exec_always --no-startup-id xset +dpms dpms 0 1200 1200
 exec_always --no-startup-id greenclip daemon
 bindsym $mod+v exec rofi -modi "clipboard:~/.scripts/greenclip print " -show clipboard -run-command -theme listview 
@@ -29,6 +28,8 @@ bindsym $mod+b exec cd ~/.scripts/ && ./rofi-bluetooth.sh
 bindsym $mod+y exec kitty yazi
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +15%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 15%-
+exec --no-startup-id picom --config ~/.config/picom.conf
+bindsym $mod+Shift+b exec kitty btop
 
 ### END
 # Font for window titles. Will also be used by the bar unless a different font
