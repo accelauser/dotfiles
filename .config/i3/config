@@ -21,7 +21,7 @@ gaps outer 0px
 bindsym --release Print exec ~/.scripts/screenshot.sh
 bindsym $mod+Escape exec rofi -show powermenu -modi powermenu:~/.scripts/rofi-power-menu
 bindsym $mod+l exec . ~/.scripts/lock.sh 
-exec_always --no-startup-id xss-lock --transfer-sleep-lock -- . ~/.scripts/lock.sh
+1exec_always --no-startup-id xss-lock --transfer-sleep-lock -- ~/.scripts/lock.sh
 exec_always --no-startup-id xset +dpms dpms 0 1200 1200
 exec_always --no-startup-id greenclip daemon
 bindsym $mod+v exec rofi -modi "clipboard:~/.scripts/greenclip print " -show clipboard -run-command -theme listview 
