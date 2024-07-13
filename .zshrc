@@ -100,7 +100,14 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH=~/bin:$PATHexport PATH=$PATH:$HOME/.local/bin
+
+export PATH=$PATH:$HOME/.local/bin
+export PATH=$PAYH:/sbin/
+export PATH=$PATH:/usr/bin
+export PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
+export PATH=$PATH:/usr/share/lite-xl
+#Path to lite-xl (maaybe I didnt install properly)
+
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 #Start powerline (the thing in the bottom of terminal)
 #powerline-daemon -q

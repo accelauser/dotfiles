@@ -14,7 +14,7 @@ exec --no-startup-id polybar
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+Tab exec rofi -show window       
 exec --no-startup-id feh --bg-fill /home/accelauser/Pictures/Wallpapers/outros/Hua-Lu-fantasy-art-digital-art-whale-creature-2185601-wallhere.com.jpg
-gaps inner 5px
+gaps inner 8px
 gaps outer 0px
 bindsym --release Print exec ~/.scripts/screenshot.sh
 bindsym $mod+Escape exec rofi -show powermenu -modi powermenu:~/.scripts/rofi-power-menu
@@ -30,6 +30,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 15%-
 exec --no-startup-id picom --config ~/.config/picom.conf
 bindsym $mod+Shift+b exec kitty btop
 client.focused #ffffff #ffffff #ffffff #ffffff #ffffff  
+
 
 ### END
 # Font for window titles. Will also be used by the bar unless a different font
