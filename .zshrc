@@ -106,9 +106,12 @@ export PATH=$PAYH:/sbin/
 export PATH=$PATH:/usr/bin
 export PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
 export PATH=$PATH:/usr/share/lite-xl
+export PATH=/home/accelauser/.local/bin:$PATH
 #Path to lite-xl (maaybe I didnt install properly)
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias lv='sudo ~/.local/bin/lvim'
+
 #Start powerline (the thing in the bottom of terminal)
 #powerline-daemon -q
 #. /usr/share/powerline/bindings/zsh/powerline.zsh

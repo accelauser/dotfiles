@@ -1,0 +1,12 @@
+### Using:
+- Dunst
+- Lunar vim
+- Acpi 
+- Polybar
+- Rofi
+- Btop
+- Greenclip 
+- Maim 
+- Sddm
+    - Sugarcandy 
+- Kitty 

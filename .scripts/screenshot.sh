@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 selected=$(
@@ -12,24 +13,30 @@ echo "󰹑    Entire screen, save to folder
 
 if [ $selected -eq 0 ]; then
     sleep 1; maim -m 10 "/home/$USER/Pictures/screenshots/$(date +'%X_%d-%m-%Y').png"
+    dunstify "Saving screen to ~/Pictures/screenshots/"
 fi
 
 if [ $selected -eq 1 ]; then
     sleep 1; maim -m 10 --window $(xdotool getactivewindow) "/home/$USER/Pictures/screenshots/$(date +'%X_%d-%m-%Y').png"
+    dunstify "Saving active window to ~/Pictures/screenshots/"
 fi
 
 if [ $selected -eq 2 ]; then
     sleep 1; maim --select "/home/$USER/Pictures/screenshots/$(date +'%X_%d-%m-%Y').png"
+    dusntify "Saving selected area to ~/Pictures/screenshots"
 fi
 
 if [ $selected -eq 3 ]; then
     sleep 1; maim -m 10 | xclip -selection clipboard -t image/png
+    dunstify "Copying screen to clipboard" -u low
 fi
 
 if [ $selected -eq 4 ]; then
     sleep 1; maim -m 10 --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+    dunstify "Copying active window to clipboard" -u low
 fi
 
 if [ $selected -eq 5 ]; then
     sleep 1; maim -m 10 --select | xclip -selection clipboard -t image/png
+    dunstify "Copying selection to clipboard" -u low
 fi
